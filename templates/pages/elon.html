@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Qonun name{% endblock %}
+
+{% block elon %}
+
+{% load static %}
+
+ <!-- blog-details -->
+ <section class="blog-details sidebar-page-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 content-side">
+                <div class="blog-details-content">
+                    <div class="inner-box">
+                        <div class="content-style-one"> 
+                            <div>
+                                <img src="{{ elon_haqida.img.url }}"></img>
+                            </div>
+                            <div class="top-content" style="margin-top: 45px;">
+                                <h4 style="font-size: 15px;"><span style="color: gray; font-weight: 100;">Yaratilish vaqti:</span>{{ elon_haqida.yaratilish_vaqti }}</h4>
+                                <h1 style="font-size: 25px;">{{ elon_haqida.sarlavha}}</h1>
+                                <div class="bold-text">{{ elon_haqida.tavsifi }}</div>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- blog-details end -->
+{% endblock elon %}

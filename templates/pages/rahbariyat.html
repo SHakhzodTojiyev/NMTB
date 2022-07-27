@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}Rahbariyat{% endblock %}
+
+{% block rahbariyat %}
+
+{% load static %}
+
+ <!--Page Title-->
+ <section class="page-title centred" style="background-image: url({% static 'images/background/page-title.jpg'%});">
+    <div class="container">
+        <div class="content-box">
+            <h1>Rahbariyat</h1>
+            <ul class="bread-crumb clearfix">
+                <li><a href={% url 'home' %}>Home</a></li>
+                <li>Rahbariyat</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End Page Title-->
+
+ <!-- event-details -->
+ <section class="event-details">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-12 col-sm-12 content-side">
+                <div class="event-details-content">
+                    <div class="inner-box">
+                    {% for x in rahbar %}
+                        <figure class="image-box"><img src="{{ x.rahbar_rasmi.url }}" alt="photo"></figure>
+                        <h1>Tavfsilotlar</h1>
+                           <div class="bold-text">{{ x.tavfsilotlar }}</div>
+                        <h2>Yutuqlari</h2>
+                        <div class="text">
+                               <p>{{ x.yutuqlari }}</p>
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
+                <div class="event-details-sidebar">
+                    <div class="inner-box">
+                    {% for x in rahbar %}
+                        <h3>{{ x.rahbar_nomi }}</h3>
+                        <div class="text">{{ x.lavozimi | upper }}</div>
+                        <ul class="info-list">
+                            <li>
+                                <h5>Tug‘ilgan sanasi:</h5>
+                                <span>{{ x.tugulgan_sanasi }}</span>
+                            </li>
+                            <li>
+                                <h5>Tug‘ilgan joyi:</h5>
+                                <span>{{ x.tugulgan_joyi }}</span>
+                            </li>
+                            <li>
+                                <h5>Millati:</h5>
+                                <span>{{ x.millati }}</span>
+                            </li>
+                            <li>
+                                <h5>Ma‘lumoti:</h5>
+                                <span>{{ x.malumoti }}</span>
+                            </li>
+                            <li>
+                                <h5>Mutaxassisligi:</h5>
+                                <span>{{ x.mutaxassisligi }}</span>
+                            </li>
+                            <li>
+                                <h5>Tizimdagi ish staji:</h5>
+                                <span>{{ x.ish_staji }} yil</span>
+                            </li>
+                            <li>
+                                <h5>Egallab turgan lavozimida:</h5>
+                                <span>{{ x.egallab_turgan_lavozimida }} yildan beri</span>
+                            </li>
+                            <li>
+                                <h5>Phone:</h5>
+                                <a href="tel:{{ x.tel_raqami }}">{{ x.tel_raqami }}</a>
+                            </li>
+                            <li>
+                                <h5>Email:</h5>
+                                <a href="mailto:info@example.com">{{ x.email }}</a>
+                            </li>
+                        </ul>
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- event-details end -->
+
+{% endblock rahbariyat %}

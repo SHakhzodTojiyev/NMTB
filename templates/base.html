@@ -1,0 +1,73 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>{% block title %}navbahor-mtb.uz{% endblock  %}</title>
+
+<!-- Stylesheets -->
+<link href="{% static 'css/style.css' %}" rel="stylesheet">
+<link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+<link href="{% static 'images/favicon.ico' %}" rel="icon"  type="image/x-icon">
+
+</head>
+
+<!-- page wrapper -->
+<body class="boxed_wrapper">
+
+    <!-- .preloader -->
+    <div class="preloader"></div>
+    <!-- /.preloader -->
+
+    {% comment %} Header {% endcomment %}
+    {% include 'layouts/header.html' %}
+
+    {% block home %}{% endblock home %}
+    
+    {% block about %}{% endblock about %}
+
+    {% block rahbariyat %}{% endblock rahbariyat %}
+
+    {% block xodimlar %}{% endblock xodimlar %}
+
+    {% block tadbirlar %}{% endblock tadbirlar %}
+    {% block tadbir %}{% endblock tadbir %}
+
+    {% block elonlar %}{% endblock elonlar %}
+    {% block elon %}{% endblock elon %}
+
+    {% block qonunlar %}{% endblock qonunlar %}
+
+    {% block contact %}{% endblock contact %}
+
+
+    {% comment %} Footer {% endcomment %}
+    {% include 'layouts/footer.html' %} 
+
+<!--Scroll to top-->
+<button class="scroll-top scroll-to-target" data-target="html">
+    <i class="fa fa-arrow-up"></i>
+</button>
+
+
+<!-- jequery plugins -->
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+<script src="{% static 'js/owl.js' %}"></script>
+<script src="{% static 'js/wow.js' %}"></script>
+<script src="{% static 'js/validation.js' %}"></script>
+<script src="{% static 'js/jquery.fancybox.js' %}"></script>
+<script src="{% static 'js/appear.js' %}"></script>
+<script src="{% static 'js/parallax.min.js' %}"></script>
+
+<!-- main-js -->
+<script src="{% static 'js/script.js' %}"></script>
+
+</body><!-- End of .page_wrapper -->
+</html>

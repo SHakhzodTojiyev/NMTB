@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Tadbir name{% endblock %}
+
+{% block tadbir %}
+
+{% load static %}
+
+ <!-- blog-details -->
+ <section class="blog-details sidebar-page-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 content-side">
+                <div class="blog-details-content">
+                    <div class="inner-box">
+                        <div class="content-style-one"> 
+                            <section class="main-slider">
+                                <div class="main-slider-carousel owl-carousel owl-theme nav-style-one">
+                                    <div class="slide" style="background-image:url({{ tadbir_haqida.img_1.url }})"></div>
+                                {% if tadbir_haqida.img_2 %}
+                                   <div class="slide" style="background-image:url({{ tadbir_haqida.img_2.url }})"></div>
+                                {% endif %}
+                                {% if tadbir_haqida.img_3 %}
+                                   <div class="slide" style="background-image:url({{ tadbir_haqida.img_3.url }})"></div>
+                                {% endif %}
+                                </div>
+                            </section>
+                            <div class="top-content" style="margin-top: 45px;">
+                                <h4 style="font-size: 15px;"><span style="color: gray; font-weight: 100;">Yaratilish vaqti:</span>{{ tadbir_haqida.yaratilish_vaqti }}</h4>
+                                <h1 style="font-size: 25px;">{{ tadbir_haqida.sarlavha}}</h1>
+                                <div class="bold-text">{{ tadbir_haqida.tavsifi }}</div>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- blog-details end -->
+{% endblock tadbir %}

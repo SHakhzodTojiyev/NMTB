@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block title %}navbahor-mtb.uz{% endblock %}
+
+{% block home %}
+
+{% load static %}
+
+<!-- main-slider -->
+<section class="main-slider">
+    <div class="main-slider-carousel owl-carousel owl-theme nav-style-one">
+        <div class="slide" style="background-image:url({% static 'images/main-slider/slider-1.jpg' %})"></div>
+        <div class="slide" style="background-image:url({% static 'images/main-slider/slider-2.jpg' %})"></div>
+        <div class="slide" style="background-image:url({% static 'images/main-slider/slider-3.jpg' %})"></div>
+    </div>
+</section>
+<!-- main-slider end -->
+
+
+<!-- about-section -->
+<section class="about-section">
+    <div class="anim-icon">
+        <div class="icon icon-1 float-bob-x"></div>
+        <div class="icon icon-2 wow zoomIn" data-wow-delay="00ms" data-wow-duration="1500ms"></div>
+        <div class="icon icon-3"></div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+                <div class="image-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <figure class="image image-1"><img src="{% static 'images/resource/about-1.jpg' %}" alt="photo"></figure>
+                    <figure class="image image-2"><img src="{% static 'images/resource/about-2.jpg' %}" alt="photo"></figure>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                <div class="content-box">
+                    <div class="sec-title style-two">
+                        <h5>About Us</h5>
+                        <h1>Welcome to Kidko Kindergarten</h1>
+                    </div>
+                    <div class="bold-text">Cupidatat non proident sunt culpa qui officia deserunt mollit anim idest laborum</div>
+                    <div class="text">
+                        <p>Cupidatat non proident sunt culpa qui officia deserunt mollit anim idest laborum sed ut perspiciatis unde omnis iste natuserror sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
+                    </div>
+                    <div class="btn-box"><a href="contact.html" class="theme-btn">Contact us</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- about-section end -->
+
+
+<!-- news-section -->
+<section class="news-section">
+    <div class="anim-icon">
+        <div class="icon icon-1 wow zoomIn" data-wow-delay="00ms" data-wow-duration="1500ms"></div>
+    </div>
+    <div class="container">
+        <div class="sec-title centred">
+            <h5>Our Blog</h5>
+            <h1>News & Article</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                <div class="news-block-one wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <figure class="image-box"><a href="blog-details.html"><img src="{% static 'images/resource/news-1.jpg' %}" alt="Photo"></a></figure>
+                        <div class="lower-content">
+                            <h3><a href="blog-details.html">The Indoor Activities for Everyone</a></h3>
+                            <ul class="info-box">
+                                <li>20 July, 2019</li>
+                                <li>5 Comments</li>
+                            </ul>
+                            <div class="text">Lorem ipsum dolor sit amet, consectetur pisicelit sed do eiusmod tempor incidie labore magna aliqua.</div>
+                            <div class="link-btn wow zoomIn" data-wow-delay="00ms" data-wow-duration="1500ms"><a href="blog-details.html"><i class="flaticon-next"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                <div class="news-block-one wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <figure class="image-box"><a href="blog-details.html"><img src="{% static 'images/resource/news-2.jpg' %}" alt="Photo"></a></figure>
+                        <div class="lower-content">
+                            <h3><a href="blog-details.html">We Make Difference in the Life Child</a></h3>
+                            <ul class="info-box">
+                                <li>19 July, 2019</li>
+                                <li>7 Comments</li>
+                            </ul>
+                            <div class="text">Lorem ipsum dolor sit amet, consectetur pisicelit sed do eiusmod tempor incidie labore magna aliqua.</div>
+                            <div class="link-btn wow zoomIn" data-wow-delay="200ms" data-wow-duration="1500ms"><a href="blog-details.html"><i class="flaticon-next"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                <div class="news-block-one wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <figure class="image-box"><a href="blog-details.html"><img src="{% static 'images/resource/news-3.jpg' %}" alt="Photo"></a></figure>
+                        <div class="lower-content">
+                            <h3><a href="blog-details.html">Kids Grooming with New Lessons</a></h3>
+                            <ul class="info-box">
+                                <li>18 July, 2019</li>
+                                <li>4 Comments</li>
+                            </ul>
+                            <div class="text">Lorem ipsum dolor sit amet, consectetur pisicelit sed do eiusmod tempor incidie labore magna aliqua.</div>
+                            <div class="link-btn wow zoomIn" data-wow-delay="400ms" data-wow-duration="1500ms"><a href="blog-details.html"><i class="flaticon-next"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- news-section end -->
+
+{% endblock home %}

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Qonunlar{% endblock %}
+
+{% block qonunlar %}
+
+{% load static %}
+
+ <!--Page Title-->
+ <section class="page-title centred" style="background-image: url({% static 'images/background/page-title.jpg'%});">
+    <div class="container">
+        <div class="content-box">
+            <h1>Qonunlar</h1>
+            <ul class="bread-crumb clearfix">
+                <li><a href={% url 'home' %}>Home</a></li>
+                <li>Qonunlar</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End Page Title-->
+
+ <!-- cart section -->
+ <section class="cart-section cart-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 table-column">
+                <div class="table-outer">
+                    <div><h1></h1></div>
+                    <table class="cart-table">
+                        <tbody>
+                            <tr>
+                                <td colspan="3" class="prod-column">
+                                    <div>
+                                        <div class="prod-title">
+                                            O'zbekiston Respublikasining "Ta`lim to'g'risida"gi Qonuni
+                                        </div>    
+                                    </div>
+                                </td>
+                                <td colspan="5" class="price"><a href="#">Yuklab olish</a></td>
+                            </tr>
+                        </tbody>    
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- cart section end -->
+
+{% endblock qonunlar %}

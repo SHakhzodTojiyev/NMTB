@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}contact{% endblock %}
+
+{% block contact %}
+
+{% load static %}
+
+ <!--Page Title-->
+ <section class="page-title centred" style="background-image: url({% static 'images/background/page-title.jpg'%});">
+    <div class="container">
+        <div class="content-box">
+            <h1>Contact</h1>
+            <ul class="bread-crumb clearfix">
+                <li><a href={% url 'home' %}>Home</a></li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End Page Title-->
+
+ <!-- contact-info-section -->
+ <section class="contact-info-section sec-pad centred">
+    <div class="container">
+        <div class="sec-title">
+            <h5>Contact</h5>
+            <h1>Get In Touch</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 info-column">
+                <div class="single-info-box wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <div class="icon-box"><i class="flaticon-address"></i></div>
+                        <h3>Our Location</h3>
+                        <div class="text">16/14 Babor Road, Shyamoly<br />Dhaka.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 info-column">
+                <div class="single-info-box wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <div class="icon-box"><i class="flaticon-vintage-hand-phone"></i></div>
+                        <h3>Phone Number</h3>
+                        <div class="text">
+                            <a href="tel:(+55)654-545-5418">(+55) 654 - 545 - 5418</a><br />
+                            <a href="tel:(+55)654-545-1235">(+55)  654 - 545 - 1235</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 info-column">
+                <div class="single-info-box wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <div class="icon-box"><i class="flaticon-mail"></i></div>
+                        <h3>Email Address</h3>
+                        <div class="text">
+                            <a href="mailto:info@example.com">info@example.com</a><br />
+                            <a href="mailto:info@templatepath.com">info@templatepath.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- contact-info-section end -->
+
+
+{% endblock contact %}

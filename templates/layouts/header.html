@@ -1,0 +1,161 @@
+{% load static %}
+
+<!-- Main Header -->
+ <header class="main-header">
+
+    <div class="header-top">
+        <div class="container">
+            <div class="inner-container clearfix">
+                <div class="social-links pull-left">
+                    <ul class="social-list">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                        <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+                        <li>NAVBAHOR TUMAN MAKTABGACHA TA‘LIM BO‘LIMI</li>
+                    </ul>
+                </div>
+                <div class="header-info pull-right">
+                    <ul class="info-list">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+998795321487">(0-79) 532-14-87</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@example.com">info@example.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-bottom">
+        <div class="container">
+            <div class="clearfix">
+                <div class="logo-box pull-left">
+                    <figure class="logo"><a href={% url 'home' %}><img src="{% static 'images/logo.png' %}" alt="logo.png"></a></figure>
+                </div>
+                <div class="nav-outer pull-right clearfix">
+                    <div class="menu-area">
+                        <nav class="main-menu navbar-expand-lg">
+                            <div class="navbar-header">
+                                <!-- Toggle Button -->      
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <div class="navbar-collapse collapse clearfix">
+                                <ul class="navigation clearfix">
+                                    <li>
+                                        <a href={% url 'home' %}>Asosiy</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="bo'lim/">Bo'lim</a>
+                                        <ul>
+                                            <li><a href={% url 'about' %}>Biz haqimizda</a></li>
+                                            <li><a href={% url 'rahbariyat' %}>Rahbariyat</a></li>
+                                            <li><a href={% url 'xodimlar' %}>Xodimlar</a></li>
+                                        </ul>
+                                    </li> 
+                                    </li> 
+                                    <li class="dropdown"><a href="#">Yangiliklar</a>
+                                        <ul>
+                                            <li><a href={% url 'tadbirlar' %}>Tadbirlar</a></li>
+                                            <li><a href={% url 'elonlar' %}>E‘lonlar</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">Hujjatlar</a>
+                                        <ul>
+                                            <li><a href={% url 'qonunlar' %}>Qonunlar</a></li>
+                                            <li><a href="#">Prezident farmon va qarorlari</a></li>
+                                            <li><a href="#">VM qaror va farmoyishlari</a></li>
+                                            <li><a href="#">Davlat standartlari</a></li>
+                                            <li><a href="#">Qo'shma qarorlar</a></li>
+                                            <li><a href="#">Nizom va tavsiyalar</a></li>
+                                            <li><a href="#">Ichki hujjatlar</a></li>
+                                            <li><a href="#">O'z kuchini yo'qotgan hujjatlar</a></li>
+                                        </ul>
+                                    </li>  
+                                    <li class="dropdown"><a href="#">Interaktiv</a>
+                                        <ul>
+                                            <li><a href="https://my.gov.uz/oz">Elektron davlat xizmatlari</a></li>
+                                            <li><a href="https://emis.mpe.uz/core/">EMIS portali</a></li>
+                                            <li><a href="https://my.gov.uz/oz/kindergarten/default/create">Onlayn ariza yuborish</a></li>
+                                        </ul>
+                                    </li>                         
+                                    <li><a href={% url 'aloqa' %}>Aloqa</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Sticky Header-->
+    <div class="sticky-header">
+        <div class="container clearfix">
+            <figure class="logo-box"><a href={% url 'home' %}><img src="{% static 'images/logo.png' %}" alt="small-logo.png" style="width:40px"></a></figure>
+            <div class="menu-area">
+                <nav class="main-menu navbar-expand-lg">
+                    <div class="navbar-header">
+                        <!-- Toggle Button -->      
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-collapse collapse clearfix">
+                        <ul class="navigation clearfix">
+                            <li>
+                                <a href={% url 'home' %}>Asosiy</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href={% url 'about' %}>Bo'lim haqida</a>
+                                <ul>
+                                    <li><a href={% url 'about' %}>Biz haqimizda</a></li>
+                                    <li><a href={% url 'rahbariyat' %}>Rahbariyat</a></li>
+                                    <li><a href={% url 'xodimlar' %}>Xodimlar</a></li>
+                                </ul>
+                            </li> 
+                            <li class="dropdown"><a href="#">Yangiliklar</a>
+                                <ul>
+                                    <li><a href={% url 'tadbirlar' %}>Tadbirlar</a></li>
+                                    <li><a href={% url 'elonlar' %}>E‘lonlar</a></li>
+                                </ul>
+                            </li> 
+                            <li class="dropdown"><a href="#">Hujjatlar</a>
+                                <ul>
+                                    <li><a href={% url 'qonunlar' %}>Qonunlar</a></li>
+                                    <li><a href="#">Prezident farmon va qarorlari</a></li>
+                                    <li><a href="#">VM qaror va farmoyishlari</a></li>
+                                    <li><a href="#">Davlat standartlari</a></li>
+                                    <li><a href="#">Qo'shma qarorlar</a></li>
+                                    <li><a href="#">Nizom va tavsiyalar</a></li>
+                                    <li><a href="#">Ichki hujjatlar</a></li>
+                                    <li><a href="#">O'z kuchini yo'qotgan hujjatlar</a></li>
+                                </ul>
+                            </li>    
+                            <li class="dropdown"><a href="#">Interaktiv</a>
+                                <ul>
+                                    <li><a href="https://my.gov.uz/oz">Elektron davlat xizmatlari</a></li>
+                                    <li><a href="https://emis.mpe.uz/core/">EMIS portali</a></li>
+                                    <li><a href="https://my.gov.uz/oz/kindergarten/default/create">Onlayn ariza yuborish</a></li>
+                                </ul>
+                            </li>                              
+                            <li><a href={% url 'aloqa' %}>Aloqa</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div><!-- sticky-header end -->
+</header>
+<!-- End Main Header -->

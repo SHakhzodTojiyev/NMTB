@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Xodimlar{% endblock %}
+
+{% block xodimlar %}
+
+{% load static %}
+
+ <!--Page Title-->
+ <section class="page-title centred" style="background-image: url({% static 'images/background/page-title.jpg'%});">
+    <div class="container">
+        <div class="content-box">
+            <h1>Xodimlar</h1>
+            <ul class="bread-crumb clearfix">
+                <li><a href={% url 'home' %}>Home</a></li>
+                <li>Xodimlar</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End Page Title-->
+
+ <!-- cart section -->
+ <section class="cart-section cart-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 table-column">
+                <div class="table-outer">
+                    <div><h1></h1></div>
+                    <table class="cart-table">
+                        <thead class="cart-header">
+                            <tr>
+                                <th colspan="3">F.I.SH</th>
+                                <th colspan="5">Lavozim</th>
+                            </tr>    
+                        </thead>
+                        <tbody>
+                            <tr>
+                            {% for x in xodim %}
+                                <td colspan="3" class="prod-column">
+                                    <div>
+                                        <div class="prod-title">
+                                          {{ x.xodim_nomi }}
+                                        </div>    
+                                    </div>
+                                </td>
+                                <td colspan="5" class="price">{{ x.lavozimi }}</td>
+                            {% endfor %}
+                            </tr>
+                        </tbody>    
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- cart section end -->
+
+{% endblock xodimlar %}

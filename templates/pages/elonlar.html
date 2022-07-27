@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}E'lonlar{% endblock %}
+
+{% block elonlar %}
+
+{% load static %}
+
+ <!--Page Title-->
+ <section class="page-title centred" style="background-image: url({% static 'images/background/page-title.jpg'%});">
+    <div class="container">
+        <div class="content-box">
+            <h1>E'lonlar</h1>
+            <ul class="bread-crumb clearfix">
+                <li><a href={% url 'home' %}>Home</a></li>
+                <li>E'lonlar</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End Page Title-->
+
+  <!-- news-section -->
+  <section class="news-section blog-page-section">
+    <div class="container">
+        <div class="row">
+        {% for x in elon %}
+            <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                <div class="news-block-one wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <figure class="image-box"><a href="/elon/{{ x.id }}"><img src="{{ x.img.url }}" alt="photo"></a></figure>
+                        <div class="lower-content">
+                            <h3><a href="/elon/{{ x.id }}">{{ x.sarlavha}}</a></h3>
+                            <ul class="info-box">
+                                <li>{{ x.yaratilish_vaqti }}</li>
+                            </ul>
+                            <div class="text">{{ x.tavsifi|slice:"55"}}...</div>
+                            <div class="link-btn"><a href="/elon/{{ x.id }}"><i class="flaticon-next"></i></a></div>
+                            <div class="more-btn"><a href="/elon/{{ x.id }}" class="theme-btn">Batafsil</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %} 
+        </div>
+    </div>
+</section>
+<!-- news-section end -->
+
+{% endblock elonlar %}
