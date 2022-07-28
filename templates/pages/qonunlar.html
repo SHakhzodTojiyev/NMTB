@@ -29,16 +29,18 @@
                     <div><h1></h1></div>
                     <table class="cart-table">
                         <tbody>
+                            {% for x in qonun %}
                             <tr>
                                 <td colspan="3" class="prod-column">
                                     <div>
                                         <div class="prod-title">
-                                            O'zbekiston Respublikasining "Ta`lim to'g'risida"gi Qonuni
+                                            {{ x.nomi }}
                                         </div>    
                                     </div>
                                 </td>
-                                <td colspan="5" class="price"><a href="#">Yuklab olish</a></td>
+                                <td colspan="5" class="price"><a href="{{ x.file.url }}" download>Yuklab olish</a></td>
                             </tr>
+                            {% endfor %}
                         </tbody>    
                     </table>
                 </div>

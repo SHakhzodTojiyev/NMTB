@@ -54,5 +54,6 @@ class Elonlar(models.Model):
 
 
 class Qonunlar(models.Model):
-  nomi = models.FilePathField()
+  nomi = models.CharField(max_length=500)
+  file = models.FileField(upload_to='file/')
   

@@ -12,7 +12,7 @@ urlpatterns = [
     path("xodimlar/", views.xodimlar, name='xodimlar'),
 
     path("tadbirlar/", views.tadbirlar, name='tadbirlar'),
-    path("tadbir/<int:pk>", views.tadbir, name='tadbir'),
+    path("tadbir/<int:pk>", views.tadbir, name='tadbir'), 
 
     path("elonlar/", views.elonlar, name='elonlar'),
     path("elon/<int:pk>", views.elon, name='elon'),

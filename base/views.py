@@ -1,5 +1,6 @@
+from multiprocessing import context
 from django.shortcuts import render
-from .models import (Rahbariyat, Xodimlar, Tadbirlar, Elonlar)
+from .models import (Rahbariyat, Xodimlar, Tadbirlar, Elonlar, Qonunlar)
 
 # Create your views here.
 def home(request):
@@ -44,7 +45,9 @@ def elon(request, pk):
 
 
 def qonunlar(request):
-  return render(request, 'pages/qonunlar.html')
+  qonun = Qonunlar.objects.order_by("-id").all()
+  context = {'qonun': qonun}
+  return render(request, 'pages/qonunlar.html', context)
 
 
 def aloqa(request):
