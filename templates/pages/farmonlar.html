@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
-{% block title %}Qonunlar{% endblock %}
+{% block title %}Farmonlar{% endblock %}
 
-{% block qonunlar %}
+{% block farmonlar %}
 
 {% load static %}
 
@@ -10,10 +10,10 @@
  <section class="page-title centred" style="background-image: url({% static 'images/background/page-title.jpg'%});">
     <div class="container">
         <div class="content-box">
-            <h1>Qonunlar</h1>
+            <h1>Farmonlar</h1>
             <ul class="bread-crumb clearfix">
                 <li><a href={% url 'home' %}>Asosiy</a></li>
-                <li>Qonunlar</li>
+                <li>Farmonlar</li>
             </ul>
         </div>
     </div>
@@ -29,7 +29,7 @@
                     <div><h1></h1></div>
                     <table class="cart-table">
                         <tbody>
-                            {% for x in qonun %}
+                            {% for x in farmon %}
                             <tr>
                                 <td colspan="3" class="prod-column">
                                     <div>
@@ -50,4 +50,4 @@
 </section>
 <!-- cart section end -->
 
-{% endblock qonunlar %}
+{% endblock farmonlar %}

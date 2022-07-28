@@ -18,6 +18,8 @@ urlpatterns = [
     path("elon/<int:pk>", views.elon, name='elon'),
 
     path("qonunlar/", views.qonunlar, name='qonunlar'),
+
+    path("farmonlar/", views.farmonlar, name='farmonlar'),
     
     path("aloqa/", views.aloqa, name='aloqa'),
 ]

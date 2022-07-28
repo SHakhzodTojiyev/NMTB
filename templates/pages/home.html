@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}navbahor-mtb.uz{% endblock %}
+{% block title %}navbahormtb.uz{% endblock %}
 
 {% block home %}
 
@@ -59,64 +59,27 @@
 
 
 <!-- news-section -->
-<section class="news-section">
-    <div class="anim-icon">
-        <div class="icon icon-1 wow zoomIn" data-wow-delay="00ms" data-wow-duration="1500ms"></div>
-    </div>
+<section class="news-section blog-page-section">
     <div class="container">
-        <div class="sec-title centred">
-            <h5>Our Blog</h5>
-            <h1>News & Article</h1>
-        </div>
         <div class="row">
+        {% for x in tadbir %}
             <div class="col-lg-4 col-md-6 col-sm-12 news-block">
                 <div class="news-block-one wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                     <div class="inner-box">
-                        <figure class="image-box"><a href="blog-details.html"><img src="{% static 'images/resource/news-1.jpg' %}" alt="Photo"></a></figure>
+                        <figure class="image-box"><a href="/tadbir/{{ x.id }}"><img src="{{ x.img_1.url }}" alt="photo"></a></figure>
                         <div class="lower-content">
-                            <h3><a href="blog-details.html">The Indoor Activities for Everyone</a></h3>
+                            <h3><a href="/tadbir/{{ x.id }}">{{ x.sarlavha}}</a></h3>
                             <ul class="info-box">
-                                <li>20 July, 2019</li>
-                                <li>5 Comments</li>
+                                <li>{{ x.yaratilish_vaqti }}</li>
                             </ul>
-                            <div class="text">Lorem ipsum dolor sit amet, consectetur pisicelit sed do eiusmod tempor incidie labore magna aliqua.</div>
-                            <div class="link-btn wow zoomIn" data-wow-delay="00ms" data-wow-duration="1500ms"><a href="blog-details.html"><i class="flaticon-next"></i></a></div>
+                            <div class="text">{{ x.tavsifi|slice:"55"}}...</div>
+                            <div class="link-btn"><a href="/tadbir/{{ x.id }}"><i class="flaticon-next"></i></a></div>
+                            <div class="more-btn"><a href="/tadbir/{{ x.id }}" class="theme-btn">Batafsil</a></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                <div class="news-block-one wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
-                    <div class="inner-box">
-                        <figure class="image-box"><a href="blog-details.html"><img src="{% static 'images/resource/news-2.jpg' %}" alt="Photo"></a></figure>
-                        <div class="lower-content">
-                            <h3><a href="blog-details.html">We Make Difference in the Life Child</a></h3>
-                            <ul class="info-box">
-                                <li>19 July, 2019</li>
-                                <li>7 Comments</li>
-                            </ul>
-                            <div class="text">Lorem ipsum dolor sit amet, consectetur pisicelit sed do eiusmod tempor incidie labore magna aliqua.</div>
-                            <div class="link-btn wow zoomIn" data-wow-delay="200ms" data-wow-duration="1500ms"><a href="blog-details.html"><i class="flaticon-next"></i></a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                <div class="news-block-one wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
-                    <div class="inner-box">
-                        <figure class="image-box"><a href="blog-details.html"><img src="{% static 'images/resource/news-3.jpg' %}" alt="Photo"></a></figure>
-                        <div class="lower-content">
-                            <h3><a href="blog-details.html">Kids Grooming with New Lessons</a></h3>
-                            <ul class="info-box">
-                                <li>18 July, 2019</li>
-                                <li>4 Comments</li>
-                            </ul>
-                            <div class="text">Lorem ipsum dolor sit amet, consectetur pisicelit sed do eiusmod tempor incidie labore magna aliqua.</div>
-                            <div class="link-btn wow zoomIn" data-wow-delay="400ms" data-wow-duration="1500ms"><a href="blog-details.html"><i class="flaticon-next"></i></a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        {% endfor %} 
         </div>
     </div>
 </section>

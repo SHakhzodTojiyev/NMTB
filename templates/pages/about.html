@@ -12,7 +12,7 @@
         <div class="content-box">
             <h1>Biz haqimizda</h1>
             <ul class="bread-crumb clearfix">
-                <li><a href={% url 'home' %}>Home</a></li>
+                <li><a href={% url 'home' %}>Asosiy</a></li>
                 <li>Biz haqimizda</li>
             </ul>
         </div>
@@ -22,32 +22,34 @@
 
 
 <!-- about-section -->
-<section class="about-section style-two">
+<section class="about-section">
     <div class="anim-icon">
         <div class="icon icon-1 float-bob-x"></div>
+        <div class="icon icon-2 wow zoomIn" data-wow-delay="00ms" data-wow-duration="1500ms"></div>
         <div class="icon icon-3"></div>
     </div>
     <div class="container">
         <div class="row">
+            {% for x in biz %}
+            <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+                <div class="image-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <figure class="image image-1"><img src="{{ x.img_1.url }}" alt="photo"></figure>
+                    <figure class="image image-2"><img src="{{ x.img_2.url }}" alt="photo"></figure>
+                </div>
+            </div>
             <div class="col-lg-6 col-md-12 col-sm-12 content-column">
                 <div class="content-box">
                     <div class="sec-title style-two">
                         <h5>Biz haqimizda</h5>
-                        <h1>Welcome to Kidko Kindergarten</h1>
+                        <h1>NAVBAHOR TUMAN MAKTABGACHA TA‘LIM BO‘LIMI</h1>
                     </div>
-                    <div class="bold-text">Cupidatat non proident sunt culpa qui officia deserunt mollit anim idest laborum</div>
                     <div class="text">
-                        <p>Cupidatat non proident sunt culpa qui officia deserunt mollit anim idest laborum sed ut perspiciatis unde omnis iste natuserror sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
+                        <p>{{ x.biz_haqimizda }}</p>
                     </div>
-                    <div class="btn-box"><a href="contact.html" class="theme-btn">Contact us</a></div>
+                    <div class="btn-box"><a href={% url 'aloqa' %} class="theme-btn">Aloqa</a></div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-                <div class="image-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-                    <figure class="image image-1"><img src="{% static 'images/resource/about-6.jpg' %}" alt="photo"></figure>
-                    <figure class="image image-2"><img src="{% static 'images/resource/about-5.jpg' %}" alt="photo"></figure>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
