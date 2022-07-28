@@ -1,10 +1,14 @@
 from django.shortcuts import render
-from .models import (Asosiy_Rasimlar, Rahbariyat, Xodimlar, Tadbirlar, Elonlar, Qonunlar)
+from .models import (Aloqa, Asosiy_Rasimlar, Biz_haqimizda, Rahbariyat, Xodimlar, Tadbirlar, Elonlar, Qonunlar)
 
 # Create your views here.
 def home(request):
   asosiy_rasimlar = Asosiy_Rasimlar.objects.all()
-  context = {'asosiy_rasimlar': asosiy_rasimlar, }
+  biz_haqimizda = Biz_haqimizda.objects.all()
+  context = {
+    'asosiy_rasimlar': asosiy_rasimlar, 
+    'biz': biz_haqimizda
+  }
   return render(request, 'pages/home.html', context)
 
 def about(request):
@@ -52,4 +56,6 @@ def qonunlar(request):
 
 
 def aloqa(request):
-  return render(request, 'pages/contact.html')
+  aloqa = Aloqa.objects.all()
+  context = {'aloqa': aloqa}
+  return render(request, 'pages/contact.html', context)

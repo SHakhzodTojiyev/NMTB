@@ -32,25 +32,26 @@
     </div>
     <div class="container">
         <div class="row">
+            {% for x in biz %}
             <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                 <div class="image-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                    <figure class="image image-1"><img src="{% static 'images/resource/about-1.jpg' %}" alt="photo"></figure>
-                    <figure class="image image-2"><img src="{% static 'images/resource/about-2.jpg' %}" alt="photo"></figure>
+                    <figure class="image image-1"><img src="{{ x.img_1.url }}" alt="photo"></figure>
+                    <figure class="image image-2"><img src="{{ x.img_2.url }}" alt="photo"></figure>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12 content-column">
                 <div class="content-box">
                     <div class="sec-title style-two">
-                        <h5>About Us</h5>
-                        <h1>Welcome to Kidko Kindergarten</h1>
+                        <h5>Biz haqimizda</h5>
+                        <h1>NAVBAHOR TUMAN MAKTABGACHA TA‘LIM BO‘LIMI</h1>
                     </div>
-                    <div class="bold-text">Cupidatat non proident sunt culpa qui officia deserunt mollit anim idest laborum</div>
                     <div class="text">
-                        <p>Cupidatat non proident sunt culpa qui officia deserunt mollit anim idest laborum sed ut perspiciatis unde omnis iste natuserror sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
+                        <p>{{ x.biz_haqimizda }}</p>
                     </div>
-                    <div class="btn-box"><a href="contact.html" class="theme-btn">Contact us</a></div>
+                    <div class="btn-box"><a href={% url 'aloqa' %} class="theme-btn">Aloqa</a></div>
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>
 </section>

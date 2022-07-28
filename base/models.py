@@ -65,3 +65,13 @@ class Asosiy_Rasimlar(models.Model):
   img_1 = models.ImageField(upload_to='images/')
   img_2 = models.ImageField(upload_to='images/', null=True, blank=True)
   img_3 = models.ImageField(upload_to='images/', null=True, blank=True)
+
+class Aloqa(models.Model):
+  manzil = models.CharField(max_length=500)
+  tel = models.CharField(max_length=50)
+  pochta = models.CharField(max_length=50)
+
+class Biz_haqimizda(models.Model):
+  biz_haqimizda = models.TextField()
+  img_1 = models.ImageField(upload_to='images/')
+  img_2 = models.ImageField(upload_to='images/')
