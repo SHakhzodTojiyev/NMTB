@@ -56,4 +56,12 @@ class Elonlar(models.Model):
 class Qonunlar(models.Model):
   nomi = models.CharField(max_length=500)
   file = models.FileField(upload_to='file/')
+
+  def __str__(self):
+      return self.nomi
   
+
+class Asosiy_Rasimlar(models.Model):
+  img_1 = models.ImageField(upload_to='images/')
+  img_2 = models.ImageField(upload_to='images/', null=True, blank=True)
+  img_3 = models.ImageField(upload_to='images/', null=True, blank=True)

@@ -1,10 +1,11 @@
-from multiprocessing import context
 from django.shortcuts import render
-from .models import (Rahbariyat, Xodimlar, Tadbirlar, Elonlar, Qonunlar)
+from .models import (Asosiy_Rasimlar, Rahbariyat, Xodimlar, Tadbirlar, Elonlar, Qonunlar)
 
 # Create your views here.
 def home(request):
-  return render(request, 'pages/home.html')
+  asosiy_rasimlar = Asosiy_Rasimlar.objects.all()
+  context = {'asosiy_rasimlar': asosiy_rasimlar, }
+  return render(request, 'pages/home.html', context)
 
 def about(request):
   return render(request, 'pages/about.html')
