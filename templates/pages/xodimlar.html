@@ -35,8 +35,8 @@
                             </tr>    
                         </thead>
                         <tbody>
+                        {% for x in xodim %}
                             <tr>
-                            {% for x in xodim %}
                                 <td colspan="3" class="prod-column">
                                     <div>
                                         <div class="prod-title">
@@ -45,8 +45,8 @@
                                     </div>
                                 </td>
                                 <td colspan="5" class="price">{{ x.lavozimi }}</td>
-                            {% endfor %}
                             </tr>
+                        {% endfor %}
                         </tbody>    
                     </table>
                 </div>
